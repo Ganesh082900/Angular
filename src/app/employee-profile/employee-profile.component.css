@@ -1,0 +1,114 @@
+.profile {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(167, 155, 200); */
+    background-color: #1c2e4a;
+    border-radius: 15px;
+    overflow: scroll;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-heading {
+    margin-left: 1.8em;
+    padding-top: 0.6em;
+    color: rgb(178, 153, 221);
+}
+
+.nav h1 {
+    margin-left: 1em;
+    color: rgb(178, 153, 221);
+}
+
+#navUL {
+    display: flex;
+    flex-direction: row;
+}
+
+#navUL li {
+    list-style: none;
+    color: rgb(178, 153, 221);
+    margin: 1em;
+    cursor: pointer;
+}
+
+/* <!-- <<<<<< FOR ALL  >>>>>>>>> --> */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid li {
+    margin: 1.2em;
+    list-style: none;
+}
+
+.grid li h5 {
+    opacity: 0.6;
+}
+
+.grid li p {
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.heading {
+    padding-top: 1em;
+    margin-left: 1.3em;
+    opacity: 0.6;
+}
+
+
+
+/* <!-- <<<<<< PROFILE  >>>>>>>>> --> */
+
+#profile {
+    width: 90%;
+    height: 60%;
+    border-radius: 10px;
+    margin-left: 5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: white;
+}
+
+
+/* <!-- <<<<<< PERSONAL  >>>>>>>>> --> */
+
+
+#personal {
+    width: 90%;
+    height: 60%;
+    border-radius: 10px;
+    margin-left: 5em;
+    margin-bottom: 1em;
+    background-color: white;
+}
+
+/* <!-- <<<<<< ADDRESS  >>>>>>>>> --> */
+
+
+#address {
+    width: 90%;
+    height: 60%;
+    border-radius: 10px;
+    margin-left: 5em;
+    margin-bottom: 1em;
+    background-color: white;
+}
+
+/* <!-- <<<<<< EDUCATION  >>>>>>>>> --> */
+
+#education {
+    width: 90%;
+    height: 60%;
+    border-radius: 10px;
+    margin-left: 5em;
+    margin-bottom: 1em;
+    background-color: white;
+}

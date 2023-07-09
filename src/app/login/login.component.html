@@ -1,0 +1,35 @@
+<div class="container">
+    <div id="img1">
+
+    </div>
+    <div id="img2">
+
+    </div>
+    <div id="box">
+        <h1><fa-icon [icon]="logo" class="logo"></fa-icon></h1>
+        <form (ngSubmit)="signUpFormSubmit()" #signUpForm="ngForm">
+            <div class="form-group">
+                <!-- <label for="email">Email </label> -->
+                <input required type="text" name="email" class="form-control" required
+                    [(ngModel)]="signUpFormData.email" #email="ngModel" placeholder="  Email ID" />
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+                    <div *ngIf="email.errors?.['required']" class="error">
+                        Email required.</div>
+                </div>
+            </div>
+            <pre></pre>
+            <div class="form-group">
+                <!-- <label for="password">Password</label> -->
+                <input type="password" name="password" class="form-control" required
+                    [(ngModel)]="signUpFormData.password" #password="ngModel" placeholder="  Password" />
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+                    <div *ngIf="password.errors?.['required']" class="error">
+                        Password required.</div>
+                </div>
+            </div>
+            <pre></pre>
+            <button class="btn-submit" type="submit" routerLink="/dashboard/identity">SUBMIT</button>
+        </form>
+    </div>
+
+</div>

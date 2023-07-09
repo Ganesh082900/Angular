@@ -1,0 +1,80 @@
+<div class="container">
+
+    <h1>Registration</h1>
+
+    <!-- <<<<<<<<<< FORM >>>>>>>>>>>>> -->
+
+    <form #signUpForm="ngForm" (ngSubmit)="signUpFormSubmit()">
+
+        <!-- <<<<<<<<<< FIRST NAME>>>>>>>>>> -->
+        <div class="form-group">
+            <input #firstName="ngModel" required minlength="2" maxlength="8" type="text" name="firstname"
+                class="form-control" [(ngModel)]="signUpFormData.firstName" placeholder="  First Name" />
+
+
+            <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="error-message">
+                <div *ngIf="firstName.errors?.['required']" class="error">
+                    FirstName required.</div>
+            </div>
+        </div>
+
+        <!-- <<<<<<<<<< LAST NAME>>>>>>>>>> -->
+
+        <div class="form-group">
+            <input #lastName="ngModel" required minlength="2" maxlength="8" type="text" name="lastName"
+                class="form-control" [(ngModel)]="signUpFormData.lastName" placeholder="  Last Name" />
+
+
+            <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="error-message">
+                <div *ngIf="lastName.errors?.['required']" class="error">
+                    LastName required.</div>
+            </div>
+        </div>
+        <!-- <<<<<<<<<<  EMAIL >>>>>>>>>> -->
+
+        <div class="form-group">
+            <input type="text" name="email" class="form-control" required [(ngModel)]="signUpFormData.email"
+                #email="ngModel" placeholder=" Email ID" />
+
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+                <div *ngIf="email.errors?.['required']" class="error">
+                    Email required.</div>
+            </div>
+        </div>
+        <!-- <<<<<<<<<< MOBILE  >>>>>>>>>> -->
+
+        <div class="form-group">
+            <input type="text" name="mobile" class="form-control" required [(ngModel)]="signUpFormData.mobile"
+                #mobile="ngModel" placeholder="  Mobile" />
+
+            <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)" class="error-message">
+                <div *ngIf="mobile.errors?.['required']" class="error">
+                    Mobile Number required.</div>
+            </div>
+        </div>
+        <!-- <<<<<<<<<< ROLE  >>>>>>>>>> -->
+
+        <div class="form-group">
+            <input list="list" id="role" name="role" class="form-control" ngModel placeholder="  Role">
+            <datalist id="list">
+
+                <option value="AMTS">AMTS</option>
+                <option value="HR">HR</option>
+                <option value="Manager">Manager</option>
+            </datalist>
+        </div>
+        <!-- <<<<<<<<<< FILE >>>>>>>>>> -->
+
+        <div class="form-group">
+            <input type="file" name="file" class="form-control" #file="ngModel" [(ngModel)]="signUpFormData.file" />
+            <!-- (change)="onFileSelected($event)" -->
+            <div *ngIf="file.invalid && (file.dirty || file.touched)" class="error-message">
+                <div *ngIf="file.errors?.['required']" class="error">
+                    Jpg required.</div>
+            </div>
+        </div>
+        <!-- <<<<<<<<<< BUTTON >>>>>>>>>> -->
+
+        <button class="btn-submit" type="submit" (click)='clear()'>SUBMIT</button>
+    </form>
+</div>
