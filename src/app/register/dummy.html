@@ -1,0 +1,83 @@
+<div class="signup_mainContainer">
+    <div class="signup_mainContainer_left">
+        <div class="signup_content_container">
+            <div class="signup_mainContainer_left_header">
+                <fa-icon [icon]="formLogo" class="main_logo" [style.color]="'rgb(80, 80, 225)'"></fa-icon>
+                <h1>Scheduler</h1>
+            </div>
+            <div class="signup_mainContainer_left_header_welcome">
+                <h2>Let's get started! </h2>
+                <fa-icon [icon]="handLogo" class="handShake" [style.color]="'#ebe70a'"></fa-icon>
+            </div>
+            <!--   <<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>> -->
+            <form (ngSubmit)="signUpFormSubmit()" #signUpForm="ngForm">
+                <div class="form-group">
+                    <label for="userName">Username:</label>
+                    <input 
+                    type="text" 
+                    id="userName" 
+                    name="userName"
+                    required 
+                    [(ngModel)]="signUpFormData.userName"
+                    #userName="ngModel">
+
+
+
+
+                    <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" class="error-message">
+                        <div *ngIf="userName.errors?.['required']" [style.color]="'red'" [style.margin-left]="'10%'">
+                            Username is required.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required [(ngModel)]="signUpFormData.email"
+                        #email="ngModel">
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+                        <div *ngIf="email.errors?.['required']" [style.color]="'red'" [style.margin-left]="'10%'">Email
+                            is required.</div>
+                        <div *ngIf="email.errors?.['email'] && (email.dirty || email.touched)">Invalid email format.
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required [(ngModel)]="signUpFormData.password"
+                        #password="ngModel">
+                    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+                        <div *ngIf="password.errors?.['required']" [style.color]="'red'" [style.margin-left]="'10%'">
+                            Password is required.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required
+                        [(ngModel)]="signUpFormData.confirmPassword" #confirmPassword="ngModel">
+                    <div *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)"
+                        class="error-message">
+                        <div *ngIf="confirmPassword.errors?.['required']" [style.color]="'red'"
+                            [style.margin-left]="'10%'">Confirm Password is required.</div>
+                        <div *ngIf="signUpFormData.password !== signUpFormData.confirmPassword"
+                            [style.margin-left]="'10%'">Passwords do not match.</div>
+                    </div>
+                </div>
+                <button type="submit" class="form_signup_button"
+                    [disabled]="signUpForm.invalid || signUpFormData.password !== signUpFormData.confirmPassword">Sign
+                    Up</button>
+            </form>
+        </div>
+
+
+    </div>
+    <div class="signup_mainContainer_right">
+        <div>
+            <img src="https://cdn.dribbble.com/users/1579320/screenshots/6802464/meeting_scheduler-ugem.png"
+                alt="My Image">
+        </div>
+
+    </div>
+</div>

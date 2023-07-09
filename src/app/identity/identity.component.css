@@ -1,0 +1,122 @@
+.identity {
+    width: 100vw;
+    height: 100vh;
+    display: relative;
+    background-color: #001446;
+}
+
+.navBar {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#first {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#profilePic {
+    width: 25%;
+    height: 90%;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin: 1em 1em 1em 2em;
+}
+
+#employeeDetails {
+    width: 40%;
+    height: 50%;
+}
+
+#employeeDetails p {
+    width: 100%;
+    height: 50%;
+    color: white;
+    font-size: x-large;
+}
+
+#employeeDetails p:last-child {
+    font-size: large;
+    opacity: 0.8;
+}
+
+
+#companeyLogo {
+    width: 30%;
+    height: 100%;
+    text-align: center;
+}
+
+#companeyLogo img {
+    width: 75%;
+    height: 70%;
+    margin-top: 1em;
+}
+
+#punchIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 30%;
+    height: 100%;
+    padding-left: 10em;
+}
+
+#punchIn p {
+    text-align: center;
+    padding-top: 1.5em;
+    width: 100%;
+    height: 30%;
+    color: white;
+    /* border: 1px solid red; */
+}
+
+#punchIn button {
+    text-align: center;
+    width: 36%;
+    height: 26%;
+    margin-left: 7.5em;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}
+
+#punchIn button:hover {
+    font-weight: 600;
+}
+
+.sideBar {
+    border: 1px solid #001446;
+    width: 16%;
+    height: 80%;
+}
+
+.sideBar div {
+    /* border: 1px solid rgb(61, 7, 61); */
+    border-right: 4px solid white;
+    border-top: 1px solid white;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 10%;
+    padding: 0.6em 0em 0em 1em;
+    margin-top: 1em;
+}
+
+.sideBar div:first-child {
+    margin-top: 1.5em;
+}
+
+.slides {
+    width: 84%;
+    height: 80%;
+    position: absolute;
+    top: 9.3em;
+    right: 0;
+}

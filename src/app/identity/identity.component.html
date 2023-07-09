@@ -1,0 +1,35 @@
+<div class="identity">
+    <div class="navBar">
+        <!-- Part 1  -->
+        <div id="first">
+            <img id="profilePic" src="https://freesvg.org/img/winkboy.png" alt="Profile Pic">
+            <div id="employeeDetails">
+                <p class="name">Ganesh Pendyala </p>
+                <p class="role">AMTS</p>
+            </div>
+        </div>
+        <!-- Part-2 -->
+        <div id="companeyLogo">
+            <img src="https://th.bing.com/th/id/R.367e8853712c50446811f0e8ed950517?rik=knZJaUfgzGJu%2bw&riu=http%3a%2f%2fwww.gaiansolutions.com%2fimages%2fgaian-logo.png&ehk=zM1gzabeRcs52vyIS%2b2dlC5%2f1N5fgHnoL%2bb2ygq2b3M%3d&risl=&pid=ImgRaw&r=0"
+                alt="Companey Logo ">
+        </div>
+        <!-- Part 3 -->
+        <div id="punchIn">
+            <p>{{ currentTime }}</p>
+            <button (click)="toggleLoginState()">{{ isLoggedIn ? 'Sign-Out' : 'Sign-In' }}</button>
+
+        </div>
+    </div>
+    <div class="sideBar">
+        <div (click)="profile('/dashboard/identity/profile')">Profile</div>
+        <div (click)="profile('/dashboard/identity/calender')">Calender</div>
+        <div (click)="profile('/dashboard/identity/register')">Add employee</div>
+        <div>Analysis</div>
+    </div>
+    <div class="slides">
+        <router-outlet></router-outlet>
+    </div>
+    <!-- <app-employee-profile class="slides">Hloo</app-employee-profile> -->
+    <!-- <app-calender class="slides">calender</app-calender> -->
+    <!-- <app-register class="slides"></apfp-register> -->
+</div>
